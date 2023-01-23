@@ -1,3 +1,22 @@
+.carousel-inner>.item>img {
+  height: 600px;
+}
+.rotateCounterClock {
+  margin-top: 75px;
+  transform: rotate(270deg);
+  max-width: 600px !important;
+  height: 450px !important;
+}
+.rotateClock {
+  margin-top: 75px;
+  transform: rotate(90deg);
+  max-width: 600px !important;
+  height: 450px !important;
+}
+.carousel img {
+  max-height: 600px !important;
+}
+/* Swap height with width for rotated images */
 *,
 *::before,
 *::after {
@@ -7,7 +26,7 @@
 /* Custom Properties, update these for your own design */
 
 :root {
-    --ff-primary: 'Lovelo-Black', serif;
+    --ff-primary: 'Lovelo-Black';
     --ff-secondary: 'Roboto', serif;
     
     --fw-reg: 400;
@@ -45,6 +64,16 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    font-family: 'Holtwood One SC' !important;
+  color: #ffa900 !important;
+}
+.architecture-site h1,
+.architecture-site h2 {
+  font-family: 'Anton' !important;
+  color: #0077b6 !important;
+}
+.architecture-site .jumbotron h1 {
+  font-size: 85px;
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -77,6 +106,10 @@ section {
 }
 h2, i, p {
   font-family: var(--ff-secondary);
+  color: #E2711D;
+}
+.architecture-site h2, .architecture-site i, .architecture-site p {
+  color: #00b4d8;
 }
 .nav-toggle {
   
@@ -97,26 +130,40 @@ nav {
 }
 nav a {
   font-size: 18px;
-  color: #0077b6  !important;
+  color: #ffc466  !important;
+  font-family: 'Roboto';
+  transition: color 0.3s;
 }
-
+.architecture-site nav a {
+  color: #00b4d8 !important;
+}
 nav .in {
   background-color: #fff;
+}
+.in ul, .collapsing ul {
+  display: block !important;
 }
 @media (max-width: 1000px) and (min-width: 768px) {
   nav ul {
     display: none;
   }
-/*   .navbar-toggle {
+  .navbar-toggle {
     display: block !important;
-  } */
+  }
+  .navbar-header {
+    float: none;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav {
+    margin: 7.5px -15px;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
-/* @media (min-width: 1000px) {
-  
-.navbar-toggle {
-    display: none;
-}
-} */
 
 
 .container-fluid {
@@ -161,7 +208,6 @@ nav .in {
 .jumbotron {
   border-radius: 0px !important;
   font-family: var(--ff-secondary);
-  background-image: url('https://www.publicdomainpictures.net/pictures/70000/velka/wood-texture-1385970617iRv.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 150px;
@@ -170,6 +216,12 @@ nav .in {
   margin-bottom: 0px;
 /*   border-style: solid;
   border-color: var(#031e63) */
+}
+.wood {
+  background-image: url('https://www.publicdomainpictures.net/pictures/70000/velka/wood-texture-1385970617iRv.jpg');
+}
+.architecture {
+  background-image: url('images/architecture-1857175_960_720.jpg');
 }
 
 .jumbo_title {
@@ -187,7 +239,7 @@ nav .in {
 /* intro */
 
 .intro {
-  background: var(--clr-dark-two);
+  background: white;
   padding-top:1rem;
   
   
@@ -205,6 +257,11 @@ nav .in {
 }
 .jumbotron > p {
   font-style: italic;
+  font-size: 25px;
+  color: #ffbb4d;
+}
+.architecture-site .jumbotron > p {
+  color: #00b4d8;
 }
 p {
   font-size: 20px;
@@ -225,23 +282,22 @@ p {
   
 }
 
-.project-one {
-  
-}
-
-.project-two {
-  
-}
-
-.project-three {
-  
-}
-.project {
-  border-color: #031E63;
-  border-width: 3px !important;
-  border-style: solid;
-}
 img {
   margin-left: auto;
   margin-right: auto;
+/*   width: 100%; */
+}
+hr {
+  border-top: 2px dashed #ffa900;
+  margin: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+footer {
+  background-color: black;
+  margin: 0px;
+  padding: 40px 50px;
+}
+footer > p {
+  margin: 0px;
 }
